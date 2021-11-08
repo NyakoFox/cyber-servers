@@ -2,8 +2,7 @@
     "name": "The Cyber Servers",
     "subtitle": "Don't look down!",
 
-    "map": "clouds_entrance",
-    "party": ["kris"],
+    "party": ["kris", "susie", "ralsei"],
 
     "transition": false,
 

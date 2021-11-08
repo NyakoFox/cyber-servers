@@ -70,13 +70,9 @@
   <object id="67" x="120" y="160" width="520" height="40"/>
  </objectgroup>
  <objectgroup color="#ff00ff" id="2" name="objects">
-  <object id="56" name="readable" x="40" y="640" width="280" height="40">
+  <object id="56" name="interactscript" x="40" y="640" width="280" height="40">
    <properties>
-    <property name="text1" value="* It seems to be broken."/>
-    <property name="text2">* Maybe going backwards really IS
-impossible...</property>
-    <property name="text3">* At least, [wait:4]until you find
-another way down.</property>
+    <property name="script" value="teacup"/>
    </properties>
   </object>
   <object id="69" name="transition" x="640" y="200" width="40" height="120">

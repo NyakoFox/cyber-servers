@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="37" height="24" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#170826" nextlayerid="25" nextobjectid="62">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="37" height="24" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#170826" nextlayerid="25" nextobjectid="76">
  <editorsettings>
   <export target="clouds_mainzone.lua" format="lua"/>
  </editorsettings>
@@ -124,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="9" name="battleborder" width="37" height="24">
+ <layer id="9" name="battleborder" width="37" height="24" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,403,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,418,418,418,419,0,0,0,0,0,0,0,0,0,390,391,391,
@@ -182,7 +182,7 @@
   <object id="52" x="1480" y="66" width="40" height="34"/>
   <object id="53" x="1480" y="400" width="40" height="160"/>
  </objectgroup>
- <objectgroup color="#ff00ff" id="2" name="objects" visible="0">
+ <objectgroup color="#ff00ff" id="2" name="objects">
   <object id="60" name="transition" x="-40" y="440" width="40" height="120">
    <properties>
     <property name="map" value="clouds_entrance"/>
@@ -190,6 +190,80 @@
    </properties>
   </object>
   <object id="61" name="nameplate" x="20" y="290" width="624" height="120"/>
+  <object id="62" name="readable" x="20" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;C.&quot;"/>
+   </properties>
+  </object>
+  <object id="63" name="readable" x="68" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;Y.&quot;"/>
+   </properties>
+  </object>
+  <object id="64" name="readable" x="116" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;B.&quot;"/>
+   </properties>
+  </object>
+  <object id="65" name="readable" x="164" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;E.&quot;"/>
+   </properties>
+  </object>
+  <object id="66" name="readable" x="212" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;R.&quot;"/>
+   </properties>
+  </object>
+  <object id="67" name="readable" x="260" y="400" width="48" height="40">
+   <properties>
+    <property name="text">* Despite not being able to see
+it, [wait:4]there is, [wait:4]in fact, [wait:4]a space
+here.</property>
+   </properties>
+  </object>
+  <object id="68" name="readable" x="308" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;S.&quot;"/>
+   </properties>
+  </object>
+  <object id="69" name="readable" x="356" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;E.&quot;"/>
+   </properties>
+  </object>
+  <object id="70" name="readable" x="404" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;R.&quot;"/>
+   </properties>
+  </object>
+  <object id="71" name="readable" x="452" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;V.&quot;"/>
+   </properties>
+  </object>
+  <object id="72" name="readable" x="500" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;E.&quot;"/>
+   </properties>
+  </object>
+  <object id="73" name="readable" x="548" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;R.&quot;"/>
+   </properties>
+  </object>
+  <object id="74" name="readable" x="596" y="400" width="48" height="40">
+   <properties>
+    <property name="text" value="* &quot;S.&quot;"/>
+   </properties>
+  </object>
+  <object id="75" name="readable" x="660" y="280" width="40" height="40">
+   <properties>
+    <property name="text1" value="* &quot;RVERS.&quot;"/>
+    <property name="text2">* You're filled with the power of
+not knowing what this means.</property>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="4" name="markers" visible="0">
   <object id="1" name="spawn" x="960" y="680" width="40" height="40"/>

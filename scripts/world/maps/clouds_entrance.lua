@@ -309,7 +309,7 @@ return {
       objects = {
         {
           id = 56,
-          name = "readable",
+          name = "interactscript",
           type = "",
           shape = "rectangle",
           x = 40,
@@ -319,9 +319,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It seems to be broken.",
-            ["text2"] = "* Maybe going backwards really IS\nimpossible...",
-            ["text3"] = "* At least, [wait:4]until you find\nanother way down."
+            ["script"] = "teacup"
           }
         },
         {

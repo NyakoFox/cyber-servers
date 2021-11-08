@@ -9,7 +9,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 25,
-  nextobjectid = 62,
+  nextobjectid = 76,
   backgroundcolor = { 23, 8, 38 },
   properties = {
     ["music"] = "serverssky"
@@ -303,7 +303,7 @@ return {
       height = 24,
       id = 9,
       name = "battleborder",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -722,7 +722,7 @@ return {
       draworder = "topdown",
       id = 2,
       name = "objects",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -758,6 +758,217 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 62,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 20,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"C.\""
+          }
+        },
+        {
+          id = 63,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 68,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"Y.\""
+          }
+        },
+        {
+          id = 64,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 116,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"B.\""
+          }
+        },
+        {
+          id = 65,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 164,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"E.\""
+          }
+        },
+        {
+          id = 66,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 212,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"R.\""
+          }
+        },
+        {
+          id = 67,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 260,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* Despite not being able to see\nit, [wait:4]there is, [wait:4]in fact, [wait:4]a space\nhere."
+          }
+        },
+        {
+          id = 68,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 308,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"S.\""
+          }
+        },
+        {
+          id = 69,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 356,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"E.\""
+          }
+        },
+        {
+          id = 70,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 404,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"R.\""
+          }
+        },
+        {
+          id = 71,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 452,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"V.\""
+          }
+        },
+        {
+          id = 72,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 500,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"E.\""
+          }
+        },
+        {
+          id = 73,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 548,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"R.\""
+          }
+        },
+        {
+          id = 74,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 596,
+          y = 400,
+          width = 48,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* \"S.\""
+          }
+        },
+        {
+          id = 75,
+          name = "readable",
+          type = "",
+          shape = "rectangle",
+          x = 660,
+          y = 280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* \"RVERS.\"",
+            ["text2"] = "* You're filled with the power of\nnot knowing what this means."
+          }
         }
       }
     },
