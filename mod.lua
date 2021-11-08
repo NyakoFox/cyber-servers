@@ -2,6 +2,12 @@ function Mod:init()
     print("Entered the Cyber Servers!")
     Game.state = "NONE"
 
+    Game.world.player.visible = false
+
+    for _,v in ipairs(Game.world.followers) do
+        v.visible = false
+    end
+
     self.jump = Assets.newSound("snd_jump")
     self.chain_extend = Assets.newSound("snd_chain_extend")
     self.wing = Assets.newSound("snd_wing")
@@ -38,10 +44,7 @@ function Mod:init()
         self.wing:play()
         self.skipped = true
 
-        Game.state = "OVERWORLD"
-        Game.world.state = "TRANSITION_IN"
-        Game.world.transition_fade = 1
-        Game.world:loadMap("clouds_entrance")
+        self:enterOverworld()
     end)
 end
 
@@ -67,9 +70,28 @@ function Mod:preUpdate(dt)
         self.wing:stop()
         self.locker:stop()
 
-        Game.state = "OVERWORLD"
-        Game.world.state = "TRANSITION_IN"
-        Game.world.transition_fade = 1
-        Game.world:loadMap("clouds_entrance")
+        self:enterOverworld()
     end
+end
+
+function Mod:enterOverworld()
+    Game.state = "OVERWORLD"
+    Game.world.state = "TRANSITION_IN"
+    Game.world.transition_fade = 1
+    Game.world:loadMap("clouds_entrance")
+    Game.world:spawnParty()
+
+    Cutscene.detachFollowers()
+
+    Game.world.followers[1].y = Game.world.followers[1].y + 32 + 4
+    Game.world.followers[2].y = Game.world.followers[2].y + 32
+
+    Game.world.followers[1].x = Game.world.followers[1].x + 46 + 30
+    Game.world.followers[2].x = Game.world.followers[2].x - 46 - 24
+
+    Game.world.followers[1]:setFacing("left")
+    Game.world.followers[2]:setFacing("right")
+
+    Cutscene.attachFollowers(true)
+
 end

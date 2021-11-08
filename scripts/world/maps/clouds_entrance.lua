@@ -9,7 +9,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 27,
-  nextobjectid = 71,
+  nextobjectid = 77,
   backgroundcolor = { 23, 8, 38 },
   properties = {},
   tilesets = {
@@ -191,10 +191,10 @@ return {
         0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 33, 34, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 49, 50, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 1, 37, 18, 36, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 17, 18, 18, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 33, 34, 34, 34, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 49, 50, 50, 50, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -235,7 +235,7 @@ return {
           x = 240,
           y = 320,
           width = 40,
-          height = 320,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {}
@@ -245,9 +245,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 120,
+          x = 80,
           y = 640,
-          width = 120,
+          width = 200,
           height = 40,
           rotation = 0,
           visible = true,
@@ -261,7 +261,7 @@ return {
           x = 80,
           y = 200,
           width = 40,
-          height = 440,
+          height = 320,
           rotation = 0,
           visible = true,
           properties = {}
@@ -291,6 +291,32 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 71,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 520,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 72,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 520,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -312,9 +338,9 @@ return {
           name = "interactscript",
           type = "",
           shape = "rectangle",
-          x = 40,
+          x = 80,
           y = 640,
-          width = 280,
+          width = 200,
           height = 40,
           rotation = 0,
           visible = true,
@@ -336,6 +362,21 @@ return {
           properties = {
             ["map"] = "clouds_mainzone",
             ["marker"] = "entry_left"
+          }
+        },
+        {
+          id = 73,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 320,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["script"] = "first_room_scare"
           }
         }
       }
