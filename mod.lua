@@ -95,3 +95,32 @@ function Mod:enterOverworld()
     Cutscene.attachFollowers(true)
 
 end
+
+
+
+
+function Mod:onRegisterActors()
+    local kris = Registry.getActor("kris")
+    local susie = Registry.getActor("susie")
+    local ralsei = Registry.getActor("ralsei")
+
+    kris.animations["jump"]   = {"kris_fall",     0, false}
+    kris.animations["landed"] = {"kris_landed", 0, false}
+    kris.animations["pose"]   = {"kris_pose",     0, false}
+
+    susie.animations["jump"]   = {"susie_fall",   0, false}
+    susie.animations["landed"] = {"susie_landed", 0, false}
+    susie.animations["pose"]   = {"susie_pose",   0, false}
+
+    ralsei.animations["jump"]   = {"ralsei_jump",   0, false}
+    ralsei.animations["landed"] = {"ralsei_landed", 0, false}
+    ralsei.animations["pose"]   = {"ralsei_pose",   0, false}
+
+    kris.offsets["pose"] = {2, 2}
+    susie.offsets["pose"] = {-2, -2}
+    ralsei.offsets["pose"] = {10, 0}
+
+    susie.animations["shock"] = {"susie_shock", 0, false}
+    susie.animations["sheesh"] = {"susie_sheesh", 0, false}
+    susie.animations["exasperated_left"] = {"susie_exasperated_left", 0, false}
+end
