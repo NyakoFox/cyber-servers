@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#170826" nextlayerid="27" nextobjectid="77">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#170826" nextlayerid="27" nextobjectid="77">
  <editorsettings>
   <export target="clouds_entrance.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="../../../assets/sprites/tilesets/clouds.tsx"/>
  <tileset firstgid="193" source="../../../assets/sprites/tilesets/tempbg.tsx"/>
  <tileset firstgid="385" source="../../../assets/sprites/tilesets/clouds_battle.tsx"/>
- <objectgroup color="#ff00ff" id="24" name="objects">
+ <objectgroup color="#ff00ff" id="24" name="objects_bg">
   <object id="68" name="background" x="0" y="-200"/>
  </objectgroup>
  <layer id="26" name="Tile Layer 2" width="16" height="21">

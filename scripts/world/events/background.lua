@@ -10,7 +10,7 @@ function Background:init(data)
 
     self.timer = 0
 
-    for i = 1, math.floor(Game.world.map_width / 8) do
+    for i = 1, math.floor(Game.world.map.width / 8) do
         local cloud_index = ((i - 1) % 4) + 1
         local x_offset = math.floor((i - 1) / 4)
         if cloud_index == 1 then

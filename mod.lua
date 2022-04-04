@@ -1,51 +1,26 @@
 function Mod:init()
     print("Entered the Cyber Servers!")
-    Game.state = "NONE"
 
-    Game.world.player.visible = false
-
-    for _,v in ipairs(Game.world.followers) do
-        v.visible = false
-    end
+    self.skip_amount = 0
+    self.skip_timer = 0
 
     self.jump = Assets.newSound("snd_jump")
     self.chain_extend = Assets.newSound("snd_chain_extend")
     self.wing = Assets.newSound("snd_wing")
     self.locker = Assets.newSound("snd_locker")
 
-
-    self.skip_amount = 0
-    self.skip_timer = 0
-
     self.skipped = false
+end
 
-    Timer.script(function(wait)
-        if self.skipped then return end
-        self.jump:play()
-        wait(0.8)
-        if self.skipped then return end
-        self.wing:play()
-
-        wait(1)
-        if self.skipped then return end
-        self.chain_extend:setLooping(true)
-        self.chain_extend:setPitch(1.1)
-        self.chain_extend:setVolume(0.3)
-        self.chain_extend:play()
-        wait(3)
-        if self.skipped then return end
-        self.chain_extend:stop()
-        self.locker:play()
-        wait(1)
-        if self.skipped then return end
-        self.jump:play()
-        wait(0.8)
-        if self.skipped then return end
-        self.wing:play()
-        self.skipped = true
-
-        self:enterOverworld()
-    end)
+function Mod:postInit(new_file)
+    if (new_file) then
+        Game.world:startCutscene("mod_enter")
+        self.rectangle = Rectangle(0, 0, 640, 480)
+        self.rectangle:setColor(0, 0, 0, 1)
+        self.rectangle:setParallax(0, 0)
+        self.rectangle.layer = 9999
+        Game.world:addChild(self.rectangle)
+    end
 end
 
 function Mod:preUpdate(dt)
@@ -75,52 +50,8 @@ function Mod:preUpdate(dt)
 end
 
 function Mod:enterOverworld()
-    Game.state = "OVERWORLD"
     Game.world.state = "TRANSITION_IN"
     Game.world.transition_fade = 1
-    Game.world:loadMap("clouds_entrance")
-    Game.world:spawnParty()
-
-    Cutscene.detachFollowers()
-
-    Game.world.followers[1].y = Game.world.followers[1].y + 32 + 4
-    Game.world.followers[2].y = Game.world.followers[2].y + 32
-
-    Game.world.followers[1].x = Game.world.followers[1].x + 46 + 30
-    Game.world.followers[2].x = Game.world.followers[2].x - 46 - 24
-
-    Game.world.followers[1]:setFacing("left")
-    Game.world.followers[2]:setFacing("right")
-
-    Cutscene.attachFollowers(true)
-
-end
-
-
-
-
-function Mod:onRegisterActors()
-    local kris = Registry.getActor("kris")
-    local susie = Registry.getActor("susie")
-    local ralsei = Registry.getActor("ralsei")
-
-    kris.animations["jump"]   = {"kris_fall",     0, false}
-    kris.animations["landed"] = {"kris_landed", 0, false}
-    kris.animations["pose"]   = {"kris_pose",     0, false}
-
-    susie.animations["jump"]   = {"susie_fall",   0, false}
-    susie.animations["landed"] = {"susie_landed", 0, false}
-    susie.animations["pose"]   = {"susie_pose",   0, false}
-
-    ralsei.animations["jump"]   = {"ralsei_jump",   0, false}
-    ralsei.animations["landed"] = {"ralsei_landed", 0, false}
-    ralsei.animations["pose"]   = {"ralsei_pose",   0, false}
-
-    kris.offsets["pose"] = {2, 2}
-    susie.offsets["pose"] = {-2, -2}
-    ralsei.offsets["pose"] = {10, 0}
-
-    susie.animations["shock"] = {"susie_shock", 0, false}
-    susie.animations["sheesh"] = {"susie_sheesh", 0, false}
-    susie.animations["exasperated_left"] = {"susie_exasperated_left", 0, false}
+    self.rectangle:remove()
+    Game.world:stopCutscene()
 end

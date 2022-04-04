@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="37" height="24" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#170826" nextlayerid="25" nextobjectid="76">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="37" height="24" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#170826" nextlayerid="25" nextobjectid="77">
  <editorsettings>
   <export target="clouds_mainzone.lua" format="lua"/>
  </editorsettings>
@@ -9,7 +9,7 @@
  <tileset firstgid="1" source="../../../assets/sprites/tilesets/clouds.tsx"/>
  <tileset firstgid="193" source="../../../assets/sprites/tilesets/tempbg.tsx"/>
  <tileset firstgid="385" source="../../../assets/sprites/tilesets/clouds_battle.tsx"/>
- <objectgroup color="#ff00ff" id="24" name="objects">
+ <objectgroup color="#ff00ff" id="24" name="objects_bg">
   <object id="58" name="background" x="0" y="0"/>
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="37" height="24">
@@ -264,6 +264,7 @@ here.</property>
 not knowing what this means.</property>
    </properties>
   </object>
+  <object id="76" name="savepoint" x="960" y="400" width="40" height="40"/>
  </objectgroup>
  <objectgroup color="#7f00ff" id="4" name="markers" visible="0">
   <object id="1" name="spawn" x="960" y="680" width="40" height="40"/>

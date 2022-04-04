@@ -16,7 +16,7 @@ function BackgroundCloud:update()
     self.x = self.x - (self.speed * DTMULT)
 
     if (self.x + self.asset:getWidth()) < 0 then
-       self.x = self.x + self.asset:getWidth() + (Game.world.map_width * Game.world.tile_width)
+       self.x = self.x + self.asset:getWidth() + Game.world.width
     end
 end
 

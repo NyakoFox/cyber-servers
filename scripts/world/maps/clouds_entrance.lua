@@ -1,7 +1,7 @@
 return {
   version = "1.5",
   luaversion = "5.1",
-  tiledversion = "1.7.2",
+  tiledversion = "1.8.2",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 16,
@@ -97,7 +97,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 24,
-      name = "objects",
+      name = "objects_bg",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -212,6 +212,8 @@ return {
       offsety = 624,
       parallaxx = 1,
       parallaxy = 1,
+      repeatx = false,
+      repeaty = false,
       properties = {}
     },
     {

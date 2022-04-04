@@ -1,7 +1,7 @@
 return {
   version = "1.5",
   luaversion = "5.1",
-  tiledversion = "1.7.2",
+  tiledversion = "1.8.2",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 37,
@@ -9,7 +9,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 25,
-  nextobjectid = 76,
+  nextobjectid = 77,
   backgroundcolor = { 23, 8, 38 },
   properties = {
     ["music"] = "serverssky"
@@ -99,7 +99,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 24,
-      name = "objects",
+      name = "objects_bg",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -969,6 +969,19 @@ return {
             ["text1"] = "* \"RVERS.\"",
             ["text2"] = "* You're filled with the power of\nnot knowing what this means."
           }
+        },
+        {
+          id = 76,
+          name = "savepoint",
+          type = "",
+          shape = "rectangle",
+          x = 960,
+          y = 400,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
